@@ -263,4 +263,24 @@ pre[class*="language-"] {
 code[class*="language-"] {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     font-size: 0.9em;
+}
+
+/* Section Header Styles */
+.section-header {
+  margin: var(--space-lg) 0 var(--space-md) 0;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1.5px solid var(--border);
+  text-align: center;
+}
+.section-header h1 {
+  font-size: var(--h1-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--space-xs) 0;
+  letter-spacing: -1px;
+}
+.section-header p {
+  font-size: 1.18rem;
+  color: var(--text-light);
+  margin: 0 auto var(--space-xs) auto;
+  max-width: 600px;
 } 
