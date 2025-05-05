@@ -1,13 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* =========================
+   Global Design System
+   ========================= */
 :root {
-    --primary: #2563eb;
-    --primary-light: #3b82f6;
-    --text: #222;
-    --background: #f8fafc;
-    --card-bg: #f1f5f9;
-    --border: #e5e7eb;
-    --shadow: 0 2px 16px 0 rgba(37, 99, 235, 0.06);
+  /* Color Palette */
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --secondary: #0ea5e9;
+  --accent: #f59e42;
+  --error: #ef4444;
+  --success: #22c55e;
+  --warning: #facc15;
+  --background: #f8fafc;
+  --surface: #fff;
+  --card-bg: #f1f5f9;
+  --border: #e5e7eb;
+  --text: #222;
+  --text-light: #6b7280;
+  --code-bg: #f3f4f6;
+
+  /* Typography */
+  --font-sans: 'Inter', Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --h1-size: 2.8rem;
+  --h2-size: 2rem;
+  --h3-size: 1.5rem;
+  --base-size: 1rem;
+  --small-size: 0.98rem;
+  --line-height: 1.6;
+  --font-weight-bold: 700;
+  --font-weight-semi: 600;
+  --font-weight-normal: 400;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3.5rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 4px 0 rgba(37, 99, 235, 0.04);
+  --shadow-md: 0 2px 16px 0 rgba(37, 99, 235, 0.06);
+  --shadow-lg: 0 4px 32px 0 rgba(37, 99, 235, 0.10);
 }
 
 html, body {
@@ -62,7 +102,7 @@ nav a[aria-current="page"], nav a.active {
     color: #fff;
     padding: 3.5rem 0 2.5rem 0;
     text-align: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
 }
 
 .hero h1 {
@@ -89,7 +129,7 @@ main {
 .contents {
     background: var(--card-bg);
     border-radius: 12px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
     padding: 2rem 2.5rem;
     margin: 2.5rem 0 0 0;
     border: 1px solid var(--border);
