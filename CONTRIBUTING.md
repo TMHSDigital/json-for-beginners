@@ -21,6 +21,17 @@ Pull requests are the best way to propose changes to the codebase. We actively w
 5. Make sure your code lints.
 6. Issue that pull request!
 
+## Visual & UX Conventions
+
+- The homepage uses a prominent hero section with a gradient background, large title, and tagline for immediate context.
+- Card-style panels (e.g., .contents) use border-radius, subtle shadows, and a light background for clarity and focus.
+- The primary color is blue (#2563eb) with lighter blue accents; backgrounds are light gray for contrast.
+- Typography uses the Inter font for a modern, readable look. Headings are bold and large for hierarchy.
+- Navigation is sticky, with active/hover states for clarity.
+- All visual changes should be made in `docs/css/style.css` and use CSS variables where possible.
+- When adding new sections or pages, follow the established hero/card/typography patterns for consistency.
+- For major visual changes, update this section and provide a before/after screenshot in your pull request.
+
 ## Any contributions you make will be under the MIT Software License
 In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
