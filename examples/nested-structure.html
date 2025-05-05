@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested JSON Structure - JSON for Beginners</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-json.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../why-json.html">Why JSON?</a></li>
+                <li><a href="../use-cases.html">Use Cases</a></li>
+                <li><a href="../syntax.html">Syntax</a></li>
+                <li><a href="index.html">Examples</a></li>
+                <li><a href="../exercises.html">Exercises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nested JSON Structure</h1>
+        <p>JSON objects can contain other objects and arrays, creating complex nested structures. This example shows a shopping cart with nested items.</p>
+
+        <section>
+            <h2>Example</h2>
+            <pre><code class="language-json">{
+  "cartId": "CART123",
+  "customer": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10001"
+    }
+  },
+  "items": [
+    {
+      "productId": "P001",
+      "name": "Laptop",
+      "price": 999.99,
+      "quantity": 1,
+      "options": {
+        "color": "Silver",
+        "warranty": "2 years"
+      }
+    },
+    {
+      "productId": "P002",
+      "name": "Mouse",
+      "price": 29.99,
+      "quantity": 2,
+      "options": {
+        "color": "Black",
+        "wireless": true
+      }
+    }
+  ],
+  "total": 1059.97,
+  "currency": "USD"
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Explanation</h2>
+            <p>This JSON structure represents a shopping cart with nested objects and arrays:</p>
+            <ul>
+                <li><code>cartId</code>: A unique identifier for the cart</li>
+                <li><code>customer</code>: An object containing customer information
+                    <ul>
+                        <li><code>name</code> and <code>email</code>: Basic customer details</li>
+                        <li><code>address</code>: A nested object with address information</li>
+                    </ul>
+                </li>
+                <li><code>items</code>: An array of product objects, each containing:
+                    <ul>
+                        <li>Basic product information (ID, name, price, quantity)</li>
+                        <li><code>options</code>: A nested object with product-specific options</li>
+                    </ul>
+                </li>
+                <li><code>total</code>: The total cost of all items</li>
+                <li><code>currency</code>: The currency used for prices</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Try It Yourself</h2>
+            <p>Create your own shopping cart by modifying the example above. Try adding more items or customer details.</p>
+            <pre><code class="language-json">{
+  "cartId": "YOUR_CART_ID",
+  "customer": {
+    "name": "Your Name",
+    "email": "your@email.com",
+    "address": {
+      "street": "Your Street",
+      "city": "Your City",
+      "state": "Your State",
+      "zip": "Your ZIP"
+    }
+  },
+  "items": [
+    {
+      "productId": "YOUR_PRODUCT_ID",
+      "name": "Your Product",
+      "price": 0.00,
+      "quantity": 1,
+      "options": {
+        "color": "Your Color",
+        "size": "Your Size"
+      }
+    }
+  ],
+  "total": 0.00,
+  "currency": "USD"
+}</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by TMHSDigital</p>
+    </footer>
+</body>
+</html> 

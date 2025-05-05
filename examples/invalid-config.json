@@ -1,0 +1,44 @@
+{
+  "app": {
+    "name": "",  // Error: Empty name
+    "version": "1.0",  // Error: Invalid version format
+    "environment": "dev",  // Error: Invalid environment value
+    "logLevel": "verbose"  // Error: Invalid log level
+  },
+  "server": {
+    "host": "localhost",
+    "port": 70000,  // Error: Port out of range
+    "timeout": -1,  // Error: Negative timeout
+    "cors": {
+      "enabled": true,
+      "methods": ["INVALID"]  // Error: Invalid HTTP method
+    }
+  },
+  "database": {
+    "type": "invalid",  // Error: Invalid database type
+    "host": "localhost",
+    "port": 5432,
+    "name": "mydb",
+    "pool": {
+      "min": 0,  // Error: Invalid minimum pool size
+      "max": -1  // Error: Invalid maximum pool size
+    }
+  },
+  "cache": {
+    "enabled": true,
+    "type": "invalid",  // Error: Invalid cache type
+    "ttl": -1  // Error: Negative TTL
+  },
+  "security": {
+    "jwt": {
+      "secret": "short",  // Error: Secret too short
+      "expiresIn": "1x",  // Error: Invalid expiration format
+      "algorithm": "INVALID"  // Error: Invalid algorithm
+    },
+    "rateLimit": {
+      "enabled": true,
+      "window": 0,  // Error: Invalid window size
+      "max": -1  // Error: Invalid max requests
+    }
+  }
+} 

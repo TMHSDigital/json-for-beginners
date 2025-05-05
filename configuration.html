@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Configuration Files - JSON for Beginners</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-json.html">Why JSON?</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="syntax.html">Syntax</a></li>
+                <li><a href="examples/">Examples</a></li>
+                <li><a href="schema-validation.html">Schema Validation</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>JSON Configuration Files</h1>
+        <p>JSON is widely used for configuration files due to its readability, structure, and wide support across programming languages. This guide covers best practices for using JSON in configuration files.</p>
+
+        <section>
+            <h2>Why Use JSON for Configuration?</h2>
+            <ul>
+                <li><strong>Readability:</strong> Easy to read and understand</li>
+                <li><strong>Structure:</strong> Hierarchical data organization</li>
+                <li><strong>Validation:</strong> Can be validated against schemas</li>
+                <li><strong>Support:</strong> Native support in most languages</li>
+                <li><strong>Tooling:</strong> Rich ecosystem of tools and editors</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Common Configuration Patterns</h2>
+            <h3>1. Environment-based Configuration</h3>
+            <pre><code class="language-json">{
+  "environment": "development",
+  "debug": true,
+  "logLevel": "debug"
+}</code></pre>
+
+            <h3>2. Feature Flags</h3>
+            <pre><code class="language-json">{
+  "features": {
+    "enableNotifications": true,
+    "enableAnalytics": false,
+    "maintenanceMode": false
+  }
+}</code></pre>
+
+            <h3>3. Service Configuration</h3>
+            <pre><code class="language-json">{
+  "server": {
+    "host": "localhost",
+    "port": 3000,
+    "timeout": 30000
+  }
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Best Practices</h2>
+            <ul>
+                <li><strong>Use Comments:</strong> Add comments to explain complex settings</li>
+                <li><strong>Group Related Settings:</strong> Organize settings logically</li>
+                <li><strong>Use Defaults:</strong> Provide sensible default values</li>
+                <li><strong>Environment Separation:</strong> Keep different environments in separate files</li>
+                <li><strong>Validation:</strong> Use JSON Schema to validate configurations</li>
+                <li><strong>Security:</strong> Never store sensitive data in JSON configs</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example: Application Configuration</h2>
+            <p>Here's a comprehensive example of an application configuration:</p>
+            <pre><code class="language-json">{
+  "app": {
+    "name": "MyApp",
+    "version": "1.0.0",
+    "environment": "production"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 3000
+  },
+  "database": {
+    "type": "postgresql",
+    "host": "localhost",
+    "port": 5432
+  }
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Environment-specific Configurations</h2>
+            <p>It's common to have different configurations for different environments:</p>
+            <ul>
+                <li><code>config.json</code> - Base configuration</li>
+                <li><code>config.dev.json</code> - Development settings</li>
+                <li><code>config.prod.json</code> - Production settings</li>
+                <li><code>config.test.json</code> - Testing settings</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Security Considerations</h2>
+            <ul>
+                <li>Never store secrets in JSON config files</li>
+                <li>Use environment variables for sensitive data</li>
+                <li>Consider using a secrets management service</li>
+                <li>Validate configuration values at startup</li>
+                <li>Use different configs for different environments</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Try It Yourself</h2>
+            <p>Check out our example configuration files:</p>
+            <ul>
+                <li><a href="examples/app-config.json">Application Configuration</a></li>
+                <li><a href="examples/dev-config.json">Development Configuration</a></li>
+                <li><a href="examples/config-schema.json">Configuration Schema</a></li>
+                <li><a href="examples/invalid-config.json">Invalid Configuration Example</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by <a href="https://github.com/TMHSDigital">TMHSDigital</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

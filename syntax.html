@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax - JSON for Beginners</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-json.html">Why JSON?</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="syntax.html">Syntax</a></li>
+                <li><a href="examples/">Examples</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>JSON Syntax</h1>
+        <p>JSON has a simple and strict syntax. Here's everything you need to know:</p>
+
+        <section>
+            <h2>Basic Structure</h2>
+            <p>JSON is built on two structures:</p>
+            <ol>
+                <li>Objects: Unordered collections of key-value pairs</li>
+                <li>Arrays: Ordered sequences of values</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Data Types</h2>
+            
+            <h3>Strings</h3>
+            <p>Double-quoted text:</p>
+            <pre><code>"Hello, World!"</code></pre>
+
+            <h3>Numbers</h3>
+            <p>Integer or floating-point:</p>
+            <pre><code>42
+3.14</code></pre>
+
+            <h3>Booleans</h3>
+            <p>true or false:</p>
+            <pre><code>true
+false</code></pre>
+
+            <h3>Null</h3>
+            <p>Represents empty value:</p>
+            <pre><code>null</code></pre>
+        </section>
+
+        <section>
+            <h2>Objects</h2>
+            <pre><code>{
+  "name": "John",
+  "age": 30,
+  "isActive": true
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Arrays</h2>
+            <pre><code>["apple", "banana", "orange"]</code></pre>
+        </section>
+
+        <section>
+            <h2>Nested Structures</h2>
+            <pre><code>{
+  "person": {
+    "name": "John",
+    "hobbies": ["reading", "gaming"]
+  }
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Rules</h2>
+            <ol>
+                <li>Use double quotes for strings</li>
+                <li>No trailing commas</li>
+                <li>No comments</li>
+                <li>No functions or expressions</li>
+                <li>Keys must be strings</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by <a href="https://github.com/TMHSDigital">TMHSDigital</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,52 @@
+{
+  // Example of a typical REST API response structure
+  "status": "success",
+  "code": 200,
+  "message": "Data retrieved successfully",
+  "data": {
+    "users": [
+      {
+        "id": "usr_123",
+        "username": "johndoe",
+        "profile": {
+          "fullName": "John Doe",
+          "email": "john@example.com",
+          "avatar": "https://api.example.com/avatars/johndoe.png",
+          "lastLogin": "2024-03-15T10:30:00Z"
+        },
+        "preferences": {
+          "theme": "dark",
+          "notifications": {
+            "email": true,
+            "push": false,
+            "sms": false
+          },
+          "language": "en-US"
+        },
+        "subscription": {
+          "plan": "premium",
+          "status": "active",
+          "validUntil": "2024-12-31T23:59:59Z",
+          "features": ["unlimited_storage", "priority_support", "api_access"]
+        }
+      },
+      {
+        "id": "usr_456",
+        "username": "janesmith",
+        "profile": {
+          "fullName": "Jane Smith",
+      }
+    ],
+    "pagination": {
+      "total": 150,
+      "page": 1,
+      "perPage": 10,
+      "totalPages": 15
+    },
+    "metadata": {
+      "generatedAt": "2024-03-15T15:00:00Z",
+      "version": "1.0.0",
+      "requestId": "req_abc123xyz"
+    }
+  }
+} 

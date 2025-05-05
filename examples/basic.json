@@ -1,0 +1,13 @@
+{
+  // Basic JSON object example showing common data types
+  "name": "John Doe",
+  "age": 30,
+  "email": "john@example.com",
+  "isActive": true,
+  "tags": ["developer", "javascript", "json"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Boston",
+    "country": "USA"
+  }
+} 

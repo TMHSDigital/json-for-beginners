@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Schema Validation - JSON for Beginners</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-json.html">Why JSON?</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="syntax.html">Syntax</a></li>
+                <li><a href="examples/">Examples</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>JSON Schema Validation</h1>
+        <p>JSON Schema is a vocabulary that allows you to annotate and validate JSON documents. It's like a contract that defines the structure, data types, and constraints of your JSON data.</p>
+
+        <section>
+            <h2>Why Use JSON Schema?</h2>
+            <ul>
+                <li><strong>Data Validation:</strong> Ensure your JSON data meets specific requirements</li>
+                <li><strong>Documentation:</strong> Self-documenting data structures</li>
+                <li><strong>Code Generation:</strong> Generate code, forms, and documentation from schemas</li>
+                <li><strong>API Design:</strong> Define clear contracts for API requests and responses</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Basic Schema Structure</h2>
+            <pre><code class="language-json">{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["name", "age"]
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Common Validation Keywords</h2>
+            <ul>
+                <li><code>type</code>: Defines the data type (string, number, object, array, boolean, null)</li>
+                <li><code>required</code>: Specifies which properties are mandatory</li>
+                <li><code>properties</code>: Defines the properties of an object</li>
+                <li><code>items</code>: Defines the schema for array items</li>
+                <li><code>minimum/maximum</code>: Sets numeric value limits</li>
+                <li><code>minLength/maxLength</code>: Sets string length limits</li>
+                <li><code>pattern</code>: Defines a regular expression pattern</li>
+                <li><code>enum</code>: Lists allowed values</li>
+                <li><code>format</code>: Specifies data format (email, date-time, uri, etc.)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example: User Profile Schema</h2>
+            <p>Let's look at a more complex example that validates a user profile:</p>
+            <pre><code class="language-json">{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "username", "email"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^usr_[a-zA-Z0-9]{8}$"
+    },
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 30
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    }
+  }
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Validation Tools</h2>
+            <p>Several tools can help you validate JSON against schemas:</p>
+            <ul>
+                <li><a href="https://www.jsonschemavalidator.net/" target="_blank">JSON Schema Validator</a> - Online validator</li>
+                <li><a href="https://github.com/ajv-validator/ajv" target="_blank">Ajv</a> - JavaScript validator</li>
+                <li><a href="https://github.com/networknt/json-schema-validator" target="_blank">JsonSchema Validator</a> - Java validator</li>
+                <li><a href="https://github.com/Julian/jsonschema" target="_blank">jsonschema</a> - Python validator</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Always specify the <code>$schema</code> version</li>
+                <li>Use descriptive property names</li>
+                <li>Include helpful error messages in descriptions</li>
+                <li>Validate early in your application pipeline</li>
+                <li>Keep schemas modular and reusable</li>
+                <li>Use references to avoid schema duplication</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Try It Yourself</h2>
+            <p>Check out our example files:</p>
+            <ul>
+                <li><a href="examples/schema-validation.json">Complete Schema Example</a></li>
+                <li><a href="examples/valid-user-profile.json">Valid User Profile</a></li>
+                <li><a href="examples/invalid-user-profile.json">Invalid User Profile</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by <a href="https://github.com/TMHSDigital">TMHSDigital</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
