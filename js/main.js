@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
             copyBtn.onclick = () => {
                 navigator.clipboard.writeText(formatted);
                 copyBtn.textContent = 'Copied!';
+                block.classList.add('copied');
                 setTimeout(() => {
                     copyBtn.textContent = 'Copy';
-                }, 2000);
+                    block.classList.remove('copied');
+                }, 400);
             };
             
             block.parentElement.style.position = 'relative';
