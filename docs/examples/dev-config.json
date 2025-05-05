@@ -1,0 +1,63 @@
+{
+  // Development configuration that extends the base config
+  "app": {
+    "name": "MyApp",
+    "version": "1.0.0",
+    "environment": "development",
+    "debug": true,
+    "logLevel": "debug"
+  },
+  "server": {
+    "host": "localhost",
+    "port": 3000,
+    "timeout": 60000,
+    "cors": {
+      "enabled": true,
+      "origins": ["http://localhost:3000", "http://localhost:8080"],
+      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      "maxAge": 86400
+    }
+  },
+  "database": {
+    "type": "postgresql",
+    "host": "localhost",
+    "port": 5432,
+    "name": "myapp_dev",
+    "user": "dev_user",
+    "pool": {
+      "min": 1,
+      "max": 5,
+      "idleTimeoutMillis": 30000
+    }
+  },
+  "cache": {
+    "enabled": false,
+    "type": "memory",
+    "ttl": 300
+  },
+  "security": {
+    "jwt": {
+      "secret": "dev-secret-key",
+      "expiresIn": "24h",
+      "algorithm": "HS256"
+    },
+    "rateLimit": {
+      "enabled": false
+    }
+  },
+  "features": {
+    "enableNotifications": true,
+    "enableAnalytics": false,
+    "enableCaching": false,
+    "maintenanceMode": false
+  },
+  "development": {
+    "hotReload": true,
+    "sourceMaps": true,
+    "mockApi": true,
+    "mockData": {
+      "users": 10,
+      "products": 50
+    }
+  }
+} 

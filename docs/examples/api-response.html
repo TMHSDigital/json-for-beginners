@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Response Example - JSON for Beginners</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-json.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../why-json.html">Why JSON?</a></li>
+                <li><a href="../use-cases.html">Use Cases</a></li>
+                <li><a href="../syntax.html">Syntax</a></li>
+                <li><a href="index.html">Examples</a></li>
+                <li><a href="../exercises.html">Exercises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>API Response Example</h1>
+        <p>JSON is commonly used in API responses. This example shows a typical weather API response with various data points.</p>
+
+        <section>
+            <h2>Example</h2>
+            <pre><code class="language-json">{
+  "status": "success",
+  "timestamp": "2024-03-15T14:30:00Z",
+  "location": {
+    "city": "New York",
+    "country": "USA",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    }
+  },
+  "current": {
+    "temperature": 22.5,
+    "feels_like": 23.0,
+    "humidity": 65,
+    "wind": {
+      "speed": 5.2,
+      "direction": "NE",
+      "gust": 8.0
+    },
+    "conditions": "Partly Cloudy",
+    "icon": "partly-cloudy-day"
+  },
+  "forecast": [
+    {
+      "date": "2024-03-16",
+      "high": 24.0,
+      "low": 18.0,
+      "conditions": "Sunny",
+      "precipitation_chance": 10
+    },
+    {
+      "date": "2024-03-17",
+      "high": 23.0,
+      "low": 17.0,
+      "conditions": "Cloudy",
+      "precipitation_chance": 30
+    }
+  ],
+  "alerts": [
+    {
+      "type": "wind",
+      "severity": "moderate",
+      "message": "Wind gusts up to 20 mph expected"
+    }
+  ]
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Explanation</h2>
+            <p>This JSON structure represents a weather API response with several key components:</p>
+            <ul>
+                <li><code>status</code>: Indicates if the API request was successful</li>
+                <li><code>timestamp</code>: When the data was retrieved</li>
+                <li><code>location</code>: Information about the location
+                    <ul>
+                        <li><code>city</code> and <code>country</code>: Location identifiers</li>
+                        <li><code>coordinates</code>: Geographic coordinates</li>
+                    </ul>
+                </li>
+                <li><code>current</code>: Current weather conditions
+                    <ul>
+                        <li>Temperature, humidity, and feels-like temperature</li>
+                        <li><code>wind</code>: Wind speed, direction, and gusts</li>
+                        <li><code>conditions</code>: Weather description</li>
+                        <li><code>icon</code>: Weather icon identifier</li>
+                    </ul>
+                </li>
+                <li><code>forecast</code>: Array of future weather predictions</li>
+                <li><code>alerts</code>: Array of weather warnings or notices</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Try It Yourself</h2>
+            <p>Create your own weather API response by modifying the example above. Try adding more forecast days or different weather conditions.</p>
+            <pre><code class="language-json">{
+  "status": "success",
+  "timestamp": "2024-03-15T00:00:00Z",
+  "location": {
+    "city": "Your City",
+    "country": "Your Country",
+    "coordinates": {
+      "latitude": 0.0,
+      "longitude": 0.0
+    }
+  },
+  "current": {
+    "temperature": 0.0,
+    "feels_like": 0.0,
+    "humidity": 0,
+    "wind": {
+      "speed": 0.0,
+      "direction": "N",
+      "gust": 0.0
+    },
+    "conditions": "Your Conditions",
+    "icon": "your-icon"
+  },
+  "forecast": [
+    {
+      "date": "2024-03-16",
+      "high": 0.0,
+      "low": 0.0,
+      "conditions": "Your Forecast",
+      "precipitation_chance": 0
+    }
+  ],
+  "alerts": []
+}</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by TMHSDigital</p>
+    </footer>
+</body>
+</html> 

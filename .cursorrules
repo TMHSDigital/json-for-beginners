@@ -1,0 +1,80 @@
+{
+  "project": {
+    "name": "json-for-beginners",
+    "description": "A comprehensive beginner's guide to JSON—why it matters, what you can do with it, and hands-on examples.",
+    "repository": "https://github.com/TMHSDigital/json-for-beginners"
+  },
+  "rules": {
+    "global": [
+      "Follow a clear, educational writing style suitable for beginners",
+      "Use practical, real-world examples when explaining JSON concepts",
+      "Include code comments in all JSON example files",
+      "Maintain consistent formatting across all JSON examples",
+      "Validate all JSON examples before committing"
+    ],
+    "docs": [
+      "Keep explanations concise and beginner-friendly",
+      "Include visual aids where helpful",
+      "Structure content with progressive complexity",
+      "Cross-reference related concepts",
+      "Always provide practical examples alongside theoretical explanations"
+    ],
+    "markdown": [
+      "Use proper heading hierarchy (H1 -> H2 -> H3)",
+      "Include a table of contents for pages longer than 500 words",
+      "Keep paragraphs short (3-5 sentences maximum)",
+      "Use code blocks with syntax highlighting for all code examples",
+      "Include alt text for all images"
+    ],
+    "json": [
+      "Format with 2-space indentation",
+      "Use double quotes for all property names and string values",
+      "Include descriptive comments for complex structures",
+      "Validate against JSON schema where applicable",
+      "Provide both simple and complex examples"
+    ],
+    "assets": [
+      "Keep images optimized and under 200KB",
+      "Use SVG format for diagrams and illustrations",
+      "Maintain consistent color scheme with project branding",
+      "Include source files for all graphics"
+    ],
+    "ci": [
+      "Run JSON validation on all example files",
+      "Validate markdown links",
+      "Build and test GitHub Pages site locally before pushing"
+    ]
+  },
+  "hooks": {
+    "pre-commit": [
+      "Validate all JSON files",
+      "Check markdown links",
+      "Run spell check on documentation"
+    ]
+  },
+  "conventions": {
+    "commits": "Use conventional commits format (feat:, fix:, docs:, etc.)",
+    "branches": "Use feature/fix/docs prefixes for branch names",
+    "issues": "Use provided issue templates for bug reports and feature requests"
+  },
+  "tasks": [
+    {
+      "name": "Add complete API example",
+      "description": "Create a comprehensive example of fetching and parsing JSON from a REST API",
+      "path": "docs/examples/api-example.md",
+      "priority": "high"
+    },
+    {
+      "name": "Create JSON schema validation tutorial",
+      "description": "Add a tutorial on validating JSON against schemas",
+      "path": "docs/validation.md",
+      "priority": "medium"
+    },
+    {
+      "name": "Add interactive JSON editor",
+      "description": "Implement a simple JavaScript-based JSON editor on the GitHub Pages site",
+      "path": "docs/editor.md",
+      "priority": "low"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  // This example demonstrates common validation errors:
+  // 1. Missing required fields (email)
+  // 2. Invalid ID format
+  // 3. Username too short
+  // 4. Invalid email format
+  // 5. Age outside valid range
+  // 6. Invalid theme value
+  // 7. Invalid role
+  // 8. Invalid date format
+  "id": "user123",  // Should start with 'usr_' and have 8 alphanumeric chars
+  "username": "jd",  // Too short, minimum 3 chars
+  "email": "not-an-email",  // Invalid email format
+  "profile": {
+    "fullName": "John Doe",
+    "age": 150,  // Too old, maximum 120
+    "avatar": "not-a-url"  // Invalid URL format
+  },
+  "preferences": {
+    "theme": "blue",  // Not in enum: light, dark, system
+    "notifications": {
+      "email": "yes",  // Should be boolean
+      "push": null,  // Should be boolean
+      "sms": "maybe"  // Should be boolean
+    }
+  },
+  "roles": ["user", "superadmin"],  // 'superadmin' not in enum
+  "metadata": {
+    "createdAt": "2024-01-15",  // Should be ISO 8601 date-time
+    "lastLogin": "yesterday",  // Should be ISO 8601 date-time
+    "version": "1"  // Should match pattern ^\d+\.\d+\.\d+$
+  }
+} 

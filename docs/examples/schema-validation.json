@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://json-for-beginners.example/schemas/user-profile.json",
+  "title": "User Profile Schema",
+  "description": "A schema for validating user profile data",
+  "type": "object",
+  "required": ["id", "username", "email", "profile"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^usr_[a-zA-Z0-9]{8}$",
+      "description": "Unique user identifier starting with 'usr_' followed by 8 alphanumeric characters"
+    },
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 30,
+      "pattern": "^[a-zA-Z0-9_-]+$",
+      "description": "Username between 3 and 30 characters, alphanumeric with underscores and hyphens"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Valid email address"
+    },
+    "profile": {
+      "type": "object",
+      "required": ["fullName", "age"],
+      "properties": {
+        "fullName": {
+          "type": "string",
+          "minLength": 2,
+          "description": "User's full name"
+        },
+        "age": {
+          "type": "integer",
+          "minimum": 13,
+          "maximum": 120,
+          "description": "User's age in years"
+        },
+        "avatar": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to user's avatar image"
+        }
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "type": "string",
+          "enum": ["light", "dark", "system"],
+          "default": "system",
+          "description": "User's preferred theme"
+        },
+        "notifications": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "boolean",
+              "default": true
+            },
+            "push": {
+              "type": "boolean",
+              "default": false
+            },
+            "sms": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        }
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["user", "admin", "moderator"]
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "default": ["user"]
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastLogin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        }
+      }
+    }
+  }
+} 

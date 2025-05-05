@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises - JSON for Beginners</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-json.html">Why JSON?</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="syntax.html">Syntax</a></li>
+                <li><a href="examples/">Examples</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>JSON Exercises</h1>
+        <p>Practice your JSON skills with these exercises. Try to solve them without looking at the answers!</p>
+
+        <section>
+            <h2>Exercise 1: Basic Object</h2>
+            <p>Create a JSON object representing a book with the following properties:</p>
+            <ul>
+                <li>title</li>
+                <li>author</li>
+                <li>year</li>
+                <li>isAvailable</li>
+                <li>genres (array)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Exercise 2: Nested Structure</h2>
+            <p>Create a JSON object representing a shopping cart with:</p>
+            <ul>
+                <li>items (array of objects with name, price, quantity)</li>
+                <li>total</li>
+                <li>customer information</li>
+                <li>shipping address</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Exercise 3: API Response</h2>
+            <p>Create a JSON response for a weather API that includes:</p>
+            <ul>
+                <li>current conditions</li>
+                <li>forecast for next 3 days</li>
+                <li>location information</li>
+                <li>metadata (timestamp, version)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Answers</h2>
+            
+            <h3>Exercise 1</h3>
+            <pre><code>{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "year": 1925,
+  "isAvailable": true,
+  "genres": ["fiction", "classic", "drama"]
+}</code></pre>
+
+            <h3>Exercise 2</h3>
+            <pre><code>{
+  "items": [
+    {
+      "name": "Laptop",
+      "price": 999.99,
+      "quantity": 1
+    },
+    {
+      "name": "Mouse",
+      "price": 29.99,
+      "quantity": 2
+    }
+  ],
+  "total": 1059.97,
+  "customer": {
+    "name": "John Smith",
+    "email": "john@example.com"
+  },
+  "shippingAddress": {
+    "street": "123 Main St",
+    "city": "Boston",
+    "zip": "02108",
+    "country": "USA"
+  }
+}</code></pre>
+
+            <h3>Exercise 3</h3>
+            <pre><code>{
+  "current": {
+    "temperature": 72,
+    "condition": "Sunny",
+    "humidity": 45,
+    "windSpeed": 8
+  },
+  "forecast": [
+    {
+      "date": "2024-03-16",
+      "high": 75,
+      "low": 60,
+      "condition": "Partly Cloudy"
+    },
+    {
+      "date": "2024-03-17",
+      "high": 78,
+      "low": 62,
+      "condition": "Sunny"
+    },
+    {
+      "date": "2024-03-18",
+      "high": 70,
+      "low": 58,
+      "condition": "Rain"
+    }
+  ],
+  "location": {
+    "city": "Boston",
+    "state": "MA",
+    "country": "USA",
+    "coordinates": {
+      "latitude": 42.3601,
+      "longitude": -71.0589
+    }
+  },
+  "metadata": {
+    "timestamp": "2024-03-15T15:00:00Z",
+    "version": "1.0.0",
+    "source": "National Weather Service"
+  }
+}</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by <a href="https://github.com/TMHSDigital">TMHSDigital</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

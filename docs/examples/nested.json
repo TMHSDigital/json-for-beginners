@@ -1,0 +1,48 @@
+{
+  // Complex nested structure example showing objects within objects and arrays
+  "company": {
+    "name": "TechCorp",
+    "founded": 2010,
+    "departments": [
+      {
+        "name": "Engineering",
+        "employees": [
+          {
+            "id": 1,
+            "name": "Alice Smith",
+            "role": "Senior Developer",
+            "skills": ["JavaScript", "Python", "Docker"]
+          },
+          {
+            "id": 2,
+            "name": "Bob Johnson",
+            "role": "Frontend Developer",
+            "skills": ["HTML", "CSS", "React"]
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "employees": [
+          {
+            "id": 3,
+            "name": "Carol White",
+            "role": "Marketing Manager",
+            "skills": ["SEO", "Content Strategy", "Analytics"]
+          }
+        ]
+      }
+    ],
+    "locations": {
+      "headquarters": {
+        "city": "San Francisco",
+        "country": "USA",
+        "employees": 50
+      },
+      "remote": {
+        "countries": ["UK", "Germany", "Japan"],
+        "employees": 30
+      }
+    }
+  }
+} 

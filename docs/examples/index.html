@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - JSON for Beginners</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../why-json.html">Why JSON?</a></li>
+                <li><a href="../use-cases.html">Use Cases</a></li>
+                <li><a href="../syntax.html">Syntax</a></li>
+                <li><a href="index.html">Examples</a></li>
+                <li><a href="../schema-validation.html">Schema Validation</a></li>
+                <li><a href="../exercises.html">Exercises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>JSON Examples</h1>
+        <p>Explore these examples to see JSON in action. Each example demonstrates different aspects of JSON structure and usage.</p>
+
+        <section>
+            <h2>Basic Examples</h2>
+            <div class="example-grid">
+                <div class="example-card">
+                    <h3>Basic Object</h3>
+                    <p>A simple JSON object with common data types.</p>
+                    <pre><code class="language-json">{
+  "name": "John Doe",
+  "age": 30,
+  "email": "john@example.com",
+  "isActive": true,
+  "tags": ["developer", "javascript", "json"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Boston",
+    "country": "USA"
+  }
+}</code></pre>
+                </div>
+
+                <div class="example-card">
+                    <h3>Nested Structure</h3>
+                    <p>A complex JSON object with nested objects and arrays.</p>
+                    <pre><code class="language-json">{
+  "company": {
+    "name": "TechCorp",
+    "founded": 2010,
+    "departments": [
+      {
+        "name": "Engineering",
+        "employees": [
+          {
+            "id": 1,
+            "name": "Alice Smith",
+            "role": "Senior Developer",
+            "skills": ["JavaScript", "Python", "Docker"]
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+                </div>
+
+                <div class="example-card">
+                    <h3>API Response</h3>
+                    <p>A typical API response structure with metadata.</p>
+                    <pre><code class="language-json">{
+  "status": "success",
+  "code": 200,
+  "data": {
+    "users": [
+      {
+        "id": "usr_123",
+        "username": "johndoe",
+        "profile": {
+          "fullName": "John Doe",
+          "email": "john@example.com"
+        }
+      }
+    ],
+    "pagination": {
+      "total": 150,
+      "page": 1,
+      "perPage": 10
+    }
+  }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>View Full Examples</h2>
+            <ul>
+                <li><a href="basic.json">Basic JSON Example</a></li>
+                <li><a href="nested.json">Nested Structure Example</a></li>
+                <li><a href="api-response.json">API Response Example</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by <a href="https://github.com/TMHSDigital">TMHSDigital</a></p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
