@@ -311,4 +311,57 @@ code[class*="language-"] {
   color: var(--text-light);
   margin: 0 auto var(--space-xs) auto;
   max-width: 600px;
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: var(--font-weight-semi);
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.6em 1.4em;
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  text-decoration: none;
+  outline: none;
+}
+.button:hover, .button:focus {
+  background: var(--primary-light);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+.button.secondary {
+  background: var(--surface);
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+.button.secondary:hover, .button.secondary:focus {
+  background: var(--primary-light);
+  color: #fff;
+  border-color: var(--primary-light);
+}
+.button.disabled, .button:disabled {
+  background: var(--border);
+  color: var(--text-light);
+  cursor: not-allowed;
+  box-shadow: none;
+  border: none;
+  opacity: 0.7;
+}
+
+/* Standardize call-to-action links */
+.cta-link {
+  color: var(--primary);
+  font-weight: var(--font-weight-semi);
+  text-decoration: underline;
+  transition: color 0.18s;
+}
+.cta-link:hover, .cta-link:focus {
+  color: var(--primary-light);
+  text-decoration: underline;
 } 
