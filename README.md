@@ -1,3 +1,5 @@
+<div align="center">
+
 # JSON for Beginners
 
 [![GitHub Actions](https://github.com/TMHSDigital/json-for-beginners/actions/workflows/pages.yml/badge.svg)](https://github.com/TMHSDigital/json-for-beginners/actions)
@@ -6,6 +8,8 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen)](https://TMHSDigital.github.io/json-for-beginners/)
 
 A comprehensive, hands-on guide to understanding and working with JSON (JavaScript Object Notation). This project covers everything from basic syntax to real-world applications, with practical examples and validation.
+
+</div>
 
 ---
 
