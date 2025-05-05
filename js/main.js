@@ -13,20 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
             block.textContent = formatted;
             block.classList.add('json');
             
-            // Add copy button
-            const copyButton = document.createElement('button');
-            copyButton.textContent = 'Copy';
-            copyButton.className = 'copy-button';
-            copyButton.onclick = () => {
+            // Create copy button
+            const copyBtn = document.createElement('button');
+            copyBtn.textContent = 'Copy';
+            copyBtn.className = 'button secondary copy-button';
+            copyBtn.onclick = () => {
                 navigator.clipboard.writeText(formatted);
-                copyButton.textContent = 'Copied!';
+                copyBtn.textContent = 'Copied!';
                 setTimeout(() => {
-                    copyButton.textContent = 'Copy';
+                    copyBtn.textContent = 'Copy';
                 }, 2000);
             };
             
             block.parentElement.style.position = 'relative';
-            block.parentElement.appendChild(copyButton);
+            block.parentElement.appendChild(copyBtn);
         } catch (e) {
             console.error('Invalid JSON:', e);
         }
